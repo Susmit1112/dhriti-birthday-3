@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Dhriti 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+  --pink: #f5b5cf;
+  --deep: #a34b78;
+  --lavender: #d9ccff;
+  --cream: #fff8fb;
+  --ink: #51394e;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: linear-gradient(145deg, #fff5fa, #f0eaff, #fff8fb);
+  overflow-x: hidden;
+}
+
+button { font: inherit; cursor: pointer; }
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+h2 { font-size: clamp(2rem, 6vw, 3.5rem); }
+
+p { line-height: 1,8; }
+
+button:focus-visible {
+  outline: 3px solid var(--deep);
+  outline-offset: 4px;
+}
+
+#intro {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 20px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+#intro::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #edb5e4;
+  filter: blur(90px);
+  opacity: .5;
+  z-index: -1;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .72rem;
+  color: var(--deep);
+}
+
+.hero-heart {
+  font-size: 3.5rem;
+  animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.12); }
+}
+
+.primary, .secondary {
+  border: 0;
+  border-radius: 50px;
+  padding: 15px 25px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.primary {
+  color: white;
+  background: linear-gradient(120deg, #b75c91, #8f6bc6);
+  box-shadow: 0 10px 30px #a35d8b35;
+}
+
+.secondary {
+  color: var(--deep);
+  background: #fff;
+  border: 1px solid #edc8dc;
+}
+
+.primary:hover, .secondary:hover {
+  transform: translateY(-3px);
+}
+
+#main { display: none; }
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 85px 22px;
+  text-align: center;
+}
+
+.section-note {
+  max-width: 550px;
+  margin: 0 auto 30px;
+  color: #806a7d;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.photo-card {
+  background: white;
+  padding: 10px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 35px #6d416815;
+  transform: rotate(-1deg);
+  transition: transform .25s;
+}
+
+.photo-card:nth-child(even) { transform: rotate(1.5deg); }
+
+.photo-card:hover { transform: rotate(0) translateY(-5px); }
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: linear-gradient(135deg, #f9dce9, #e4dcff);
+}
+
+.photo-card p {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin: 14px 3px 0;
+  font-size: 1.05rem;
+}
+
+.letter-box {
+  max-width: 680px;
+  margin: auto;
+  padding: 32px 24px;
+  background: #ffffffb8;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  box-shadow: 0 15px 55px #76517a12;
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  max-width: 520px;
+  margin: 25px auto 0;
+  animation: appear .8s ease;
+}
+
+#letter p { white-space: pre-line; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.reason {
+  padding: 22px 12px;
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+  background: #ffffffa3;
+}
+
+.reason span {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.cake {
+  font-size: clamp(5rem, 18vw, 8rem);
+  margin: 20px 0;
+  animation: cakefloat 3s ease-in-out infinite;
+}
+
+@keyframes cakefloat {
+  50% { transform: translateY(-8px); }
+}
+
+#finalWish {
+  display: none;
+  margin: 28px auto 0;
+  max-width: 600px;
+  animation: appear .8s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px 50px;
+  color: #96758f;
+  font-size: .9rem;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 10;
+  animation: floatup 5s linear forwards;
+}
+
+@keyframes floatup {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -15px;
+  width: 9px;
+  height: 13px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(800deg); }
+}
+
+/* Background music button */
+.music-control {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  border: 1px solid #edc8dc;
+  border-radius: 50px;
+  padding: 12px 17px;
+  color: var(--deep);
+  background: #ffffffed;
+  box-shadow: 0 5px 20px #76517a20;
+}
+
+.music-control.hidden {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .reasons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+  <div class="hero-heart">💗</div>
+  <p class="eyebrow">A little surprise for someone special</p>
+  <h1>Happy Birthday<br><span style="color:#ad639d">Dhriti</span></h1>
+  <p>Ekta chotto prochesta sudhu tor jonno</p>
+  <button class="primary" onclick="openSurprise()">
+    Open your surprise ✨
+  </button>
+  <p style="font-size:.8rem; margin-top:35px">Made with love, just for you</p>
+</div>
+
+<div id="main">
+
+  <section>
+    <p class="eyebrow">Ajker din ta sudhu tor jonne</p>
+    <h2>A little world made for you 💕</h2>
+    <p class="section-note">
+      Out of all the things I could give you, I wanted to make
+      something that you could keep coming back to.
+    </p>
+    <div style="font-size:2rem">🌷 ✨ 💗 ✨ 🌷</div>
+  </section>
+
+  <section id="memories">
+    <p class="eyebrow">Little moments, big feelings</p>
+    <h2>Our Memory Lane 📸</h2>
+    <p class="section-note">
+      Tor sathe katano prottekta moment e amar kache khub e dami.
+     <br> Here are a few of my favourites.</br>
+    </p>
+
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="images/photo1.jpeg"
+             alt="A favourite memory"
+             onerror="this.style.opacity='.15'">
+        <p>Amader sei prothom chobi 💗</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="images/photo2.jpeg"
+             alt="A special moment"
+             onerror="this.style.opacity='.15'">
+        <p>Aro ekta saraswati pujo thik eki vabe eksathe 🌷</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="images/photo3.jpeg"
+             alt="Another favourite memory"
+             onerror="this.style.opacity='.15'">
+        <p>Erom e kache thakis sarajibon ✨</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="images/photo4.jpeg"
+             alt="A lovely memory"
+             onerror="this.style.opacity='.15'">
+        <p>Mone pore sei dingulor kotha? 🦋 <br>
+        Thik evabei more memories to come ❤️</br></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="letterSection">
+    <p class="eyebrow">Something from my heart</p>
+    <h2>A Letter for You 💌</h2>
+
+    <div class="letter-box">
+      <div style="font-size:3rem">💌</div>
+      <p>There's something I wanted you to read today...</p>
+
+      <button class="primary" id="letterButton" onclick="openLetter()">
+        Open my letter
+      </button>
+
+      <div id="letter">
+        <h3>Dear Dhriti, 💗</h3>
+
+        <p>A very very Happy Birthday Dhriti 😊❤.. Dekhte dekhte 20 bochor boyosh hoa gelo tor, teen age sesh kore ebar life er ekta khub important chapter e enter korli, Hoito ekhn ar sob kichu oto tao easy thakbe na joto ta eto bochor chilo, kintu lore jao botso, egiye cholte hbe tomai ✊, onek boro hote hbe onek boro jaigai jete hbe. Jani  ami hoito ar sei position e nei tor life e jemon ta koakmas age chilam, kintu eta mne rakhis tor kharap time e kauk na peleo ami achie sudhu ekbar bolis amai ☺️. Tor hoito mne hoi ami tor feelings nia khelchi, bissas kor jodi otai amar icha hoto ami tor kache abar fire astam na, 2 maser break e realize korechi I'm totally incomplete without you 🥺. Bas eitukui. Ja korchis khub dekhe sune vebe kor ar ektuuu khani amar feeling gulor kotha vabis 🙃 tholei hbe. Khub khub khub moja kor. Sarajibn evabei haste thak, and keep shinning, onek boro hou. Abaro bolchi tui kono ordinary keu noi amar jibone, you are someone so special in my life. I love you motii ❤. Once more Happy Birthday amar Aluu 🎂. .</p>
+
+        <p style="text-align:right">
+          With lots of love,<br>Tor Honu 💕
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">A few little reminders</p>
+    <h2>Reasons You're Special 🌸</h2>
+    <p class="section-note">
+      Just a few reminders of the wonderful person you are.
+    </p>
+
+    <div class="reasons">
+      <div class="reason"><span>🌷</span>Tor oi sundor hasita<br> Amar ekhono mone pore oi din tar kotha, ami kivabe bowled out hoachilm tor hasite 🙃</br></div>
+      <div class="reason"><span>✨</span>Your own special sparkle</div>
+      <div class="reason"><span>🦋</span>Tor kora protita care</div>
+      <div class="reason"><span>💗</span>All the little things that make you, you</div>
+    </div>
+  </section>
+
+  <section id="birthday">
+    <p class="eyebrow">Your special moment</p>
+    <h2>Make a Birthday Wish 🎂</h2>
+    <p class="section-note">
+      Close your eyes for a moment, make a wish, and tap below.
+    </p>
+
+    <div class="cake">🎂</div>
+
+    <button class="primary" id="wishButton" onclick="makeWish()">
+      My wish is ready ✨
+    </button>
+
+    <div id="finalWish">
+      <h2>Happy Birthday, Dhriti! 💖</h2>
+      <p>
+        May this year bring you happiness, wonderful adventures,
+        beautiful memories and so many reasons to smile. Aro boro hou, jibone onek egiye cholooo.
+      </p>
+      <p>
+        
+ Ami jani you deserve a more beautiful birthday! 🌙. <br>Tao ei chotto surprise ta sudhu tor jonne amar torof theke to make your day a little
+        more magical.✨ </br> 
+      </p>
+      <div style="font-size:2.5rem">💗 🌷 🎀 🌷 💗</div>
+
+      <button class="secondary" onclick="celebrate()">
+        More confetti! 🎉
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    Made especially for My Motii, with love 💗
+    <p>One little website. So many lovely memories.</p>
+  </footer>
+</div>
+
+<!-- Background music: add your MP3 at music/birthday-song.mp3 -->
+<audio id="birthdayMusic" loop preload="auto">
+  <source src="music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<button
+  class="music-control hidden"
+  id="musicToggle"
+  onclick="toggleMusic()"
+  aria-label="Pause or play background music">
+  🎵 Music: On
+</button>
+
+<div id="confetti"></div>
+
+<script>
+function openSurprise() {
+  const music = document.getElementById('birthdayMusic');
+
+  // Start music after the visitor clicks the button.
+  if (music) {
+    music.volume = 0.45;
+
+    music.play()
+      .then(() => {
+        updateMusicButton();
+      })
+      .catch(() => {
+        console.log(
+          'Music could not start. Check music/birthday-song.mp3.'
+        );
+      });
+  }
+
+  document.getElementById('intro').style.display = 'none';
+  document.getElementById('main').style.display = 'block';
+  document.getElementById('musicToggle').classList.remove('hidden');
+
+  window.scrollTo(0, 0);
+  floatHearts();
+}
+
+function toggleMusic() {
+  const music = document.getElementById('birthdayMusic');
+
+  if (music.paused) {
+    music.play()
+      .then(updateMusicButton)
+      .catch(() => {
+        alert('Could not play the song. Please check your MP3 file.');
+      });
+  } else {
+    music.pause();
+    updateMusicButton();
+  }
+}
+
+function updateMusicButton() {
+  const music = document.getElementById('birthdayMusic');
+  const button = document.getElementById('musicToggle');
+
+  if (!music || !button) return;
+
+  button.textContent = music.paused
+    ? '🎵 Music: Off'
+    : '🎵 Music: On';
+}
+
+function openLetter() {
+  document.getElementById('letter').style.display = 'block';
+
+  document.getElementById('letterButton').textContent =
+    'A letter, just for you 💗';
+
+  document.getElementById('letterButton').disabled = true;
+}
+
+function makeWish() {
+  document.getElementById('finalWish').style.display = 'block';
+
+  document.getElementById('wishButton').textContent =
+    'Your wish is on its way 💫';
+
+  document.getElementById('wishButton').disabled = true;
+
+  celebrate();
+
+  setTimeout(() => {
+    document.getElementById('finalWish').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }, 150);
+}
+
+function celebrate() {
+  const area = document.getElementById('confetti');
+  const symbols = ['💗', '✨', '🎀', '💕', '🌸'];
+
+  for (let i = 0; i < 65; i++) {
+    const piece = document.createElement('div');
+
+    piece.className = 'confetti-piece';
+    piece.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    piece.style.left = Math.random() * 100 + '%';
+    piece.style.animationDelay = Math.random() * 1.5 + 's';
+    piece.style.fontSize = (12 + Math.random() * 15) + 'px';
+
+    area.appendChild(piece);
+
+    setTimeout(() => piece.remove(), 5000);
+  }
+}
+
+function floatHearts() {
+  const symbols = ['💗', '💕', '♡', '✨'];
+
+  for (let i = 0; i < 15; i++) {
+    setTimeout(() => {
+      const heart = document.createElement('div');
+
+      heart.className = 'floating-heart';
+      heart.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (15 + Math.random() * 20) + 'px';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 5200);
+    }, i * 250);
+  }
+}
+</script>
+
+</body>
+</html>
